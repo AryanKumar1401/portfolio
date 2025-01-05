@@ -5,16 +5,16 @@ import {
   Github,
   Linkedin,
   Mail,
-  FileText,
+
   Server,
   Database,
-  Layout,
+
   Zap,
-  Globe,
+
   Box,
   Cloud,
   Link,
-  Trophy
+
 } from 'lucide-react';
 
 const skills = [
