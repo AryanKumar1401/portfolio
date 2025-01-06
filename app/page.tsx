@@ -1,6 +1,6 @@
 "use client";
 import { motion } from 'framer-motion';
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Code,
   Github,
@@ -12,6 +12,8 @@ import {
   Box,
   Cloud,
   Link,
+  Menu,
+  X,
 } from 'lucide-react';
 
 const skills = [
@@ -109,6 +111,8 @@ const projects = [
 ];
 
 const PortfolioPage = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const fadeInUp = {
     initial: { y: 20, opacity: 0 },
     animate: { y: 0, opacity: 1 },
@@ -147,25 +151,51 @@ const PortfolioPage = () => {
 
       {/* Header */}
       <header className="bg-white/90 backdrop-blur-sm shadow-md fixed top-0 left-0 right-0 z-50">
-        <div className="max-w-6xl mx-auto px-4 py-6 flex justify-between items-center">
-          <h1 className="text-2xl font-bold font-poppins text-[#FF6B6B]">Aryan Kumar</h1>
-          <nav className="flex space-x-6 font-poppins font-medium">
+        <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+          <h1 className="text-xl md:text-2xl font-bold font-poppins text-[#FF6B6B]">Aryan Kumar</h1>
+          
+          {/* Mobile Menu Button */}
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden text-[#2D3436]"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex space-x-6 font-poppins font-medium">
             <a href="#about" className="hover:text-[#FF6B6B] transition-colors">About</a>
             <a href="#skills" className="hover:text-[#FF6B6B] transition-colors">Skills</a>
             <a href="#projects" className="hover:text-[#FF6B6B] transition-colors">Projects</a>
           </nav>
         </div>
+
+        {/* Mobile Navigation Menu */}
+        {isMenuOpen && (
+          <motion.nav 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="md:hidden bg-white border-t py-4"
+          >
+            <div className="flex flex-col space-y-4 items-center font-poppins font-medium">
+              <a href="#about" onClick={() => setIsMenuOpen(false)} className="hover:text-[#FF6B6B] transition-colors">About</a>
+              <a href="#skills" onClick={() => setIsMenuOpen(false)} className="hover:text-[#FF6B6B] transition-colors">Skills</a>
+              <a href="#projects" onClick={() => setIsMenuOpen(false)} className="hover:text-[#FF6B6B] transition-colors">Projects</a>
+            </div>
+          </motion.nav>
+        )}
       </header>
 
       {/* Hero Section */}
       <section id="about" className="max-w-6xl mx-auto px-4 py-20 mt-10">
-        <div className="grid md:grid-cols-2 items-center gap-12">
+        <div className="flex flex-col md:grid md:grid-cols-2 items-center gap-8">
           <motion.div
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
+            className="text-center md:text-left order-2 md:order-1"
           >
-            <h2 className="text-5xl font-bold mb-6 font-poppins leading-tight text-[#2D3436]">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 font-poppins leading-tight text-[#2D3436]">
               Computer Science Student & <span className="text-[#FF6B6B]">Software Developer</span>
             </h2>
             <motion.p
@@ -176,7 +206,7 @@ const PortfolioPage = () => {
             >
               Hi there! I'm Aryan Kumar, a student at Cornell University, majoring in Computer Science and minoring in AI. I'm a passionate tech enthusiast who thrives at the intersection of innovation, creativity, and problem-solving. My journey at Cornell has taken me from creating a platform with Cornell GreenClub to optimize transportation routes and reduce carbon emissions to developing AI path-planning algorithms for autonomous boats as part of the Cornell Autoboat Project Team. Outside of coding, you'll find me hiking scenic trails, running around lakes, or playing the piano.  I’m driven by the belief that technology is more than just tools—it’s a force for shaping a sustainable, smarter future. Let’s connect and create something extraordinary together!
             </motion.p>
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
               <div className="flex space-x-4 items-center">
                 <a href="https://github.com/AryanKumar1401/" aria-label="GitHub" className="hover:text-[#FF6B6B] transition-colors">
                   <Github size={24} />
@@ -189,7 +219,7 @@ const PortfolioPage = () => {
                 </a>
                 <a
                   href="#projects"
-                  className="inline-flex items-center justify-center gap-2 bg-[#FF6B6B] text-white px-8 py-4 rounded-lg hover:bg-[#FF5252] transition-colors font-poppins font-medium text-lg shadow-lg hover:shadow-xl ml-4"
+                  className="w-full md:w-auto text-center inline-flex items-center justify-center gap-2 bg-[#FF6B6B] text-white px-6 py-3 md:px-8 md:py-4 rounded-lg hover:bg-[#FF5252] transition-colors font-poppins font-medium text-base md:text-lg shadow-lg hover:shadow-xl"
                 >
                   View Featured Projects
                   <Code size={20} />
@@ -201,9 +231,9 @@ const PortfolioPage = () => {
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
-            className="hidden md:block"
+            className="block order-1 md:order-2 mb-8 md:mb-0"
           >
-            <div className="bg-blue-100 rounded-full w-64 h-64 mx-auto overflow-hidden">
+            <div className="bg-blue-100 rounded-full w-48 h-48 md:w-64 md:h-64 mx-auto overflow-hidden">
               <img
                 src="profile.png"
                 alt="Profile"
@@ -215,7 +245,7 @@ const PortfolioPage = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 bg-white">
+      <section id="skills" className="py-16 md:py-20 bg-white">
         <motion.div
           initial="initial"
           whileInView="animate"
@@ -223,10 +253,10 @@ const PortfolioPage = () => {
           variants={staggerContainer}
           className="max-w-6xl mx-auto px-4"
         >
-          <motion.h2 variants={fadeInUp} className="text-4xl font-bold text-center mb-12 font-poppins text-[#2D3436]">
+          <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 font-poppins text-[#2D3436]">
             Technical Skills
           </motion.h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {skills.map((skillCategory, index) => (
               <motion.div
                 key={index}
@@ -255,7 +285,7 @@ const PortfolioPage = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 bg-[#FFFAF0]">
+      <section id="projects" className="py-16 md:py-20 bg-[#FFFAF0]">
         <motion.div
           initial="initial"
           whileInView="animate"
@@ -263,10 +293,10 @@ const PortfolioPage = () => {
           variants={staggerContainer}
           className="max-w-6xl mx-auto px-4"
         >
-          <motion.h2 variants={fadeInUp} className="text-4xl font-bold text-center mb-12 font-poppins text-[#2D3436]">
+          <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 font-poppins text-[#2D3436]">
             Featured Projects
           </motion.h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {projects.map((project, index) => (
               <motion.div
                 key={index}
@@ -326,11 +356,11 @@ const PortfolioPage = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="bg-[#FF6B6B] text-white py-20"
+        className="bg-[#FF6B6B] text-white py-16 md:py-20"
       >
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6 font-poppins">Let's Connect</h2>
-          <p className="text-xl mb-8 font-merriweather max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 font-poppins">Let's Connect</h2>
+          <p className="text-lg md:text-xl mb-6 md:mb-8 font-merriweather max-w-2xl mx-auto px-4">
             Interested in collaborating or discussing potential opportunities?
             Feel free to reach out at ak2488 [at] cornell [dot] edu.
           </p>
