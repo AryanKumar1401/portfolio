@@ -73,7 +73,9 @@ const projects = [
   },
   {
     title: 'HireVision',
-    description: '🏆 Best Product Award @ J&J Hackathon \'24: HireVision is a transparent interview platform that streamlines the HireVue process by providing detailed candidate reviews with pros, cons, and summaries. It also delivers behavioral analytics across applicants, helping companies visualize hiring patterns and optimize recruitment strategies.',
+    description: '🏆 Best Product Award @ J&J Hackathon \'24: HireVision is a transparent interview platform that streamlines \
+    the HireVue process by providing detailed candidate reviews with pros, cons, and summaries. It also delivers behavioral analytics \
+    across applicants, helping companies visualize hiring patterns and optimize recruitment strategies.',
     technologies: ['TypeScript', 'Python', 'GPT-4', 'FastAPI', 'React', 'Tailwind CSS', 'Supabase', 'Prisma'],
     link: 'https://github.com/23spakkerakari/HireVision',
     website: 'https://www.canva.com/design/DAGWBja42Uw/OB7lXjmUI9obDXJgJ2LSxg/edit?utm_content=DAGWBja42Uw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'
@@ -81,11 +83,33 @@ const projects = [
   },
   {
     title: 'Pathway',
-    description: '🏆 Runner Up (Beginner Track) @ Big Red Hacks \'24: Pathway is a community-driven mapping platform designed for disabled users, enabling them to discover and share accessibility information about various locations through an intuitive and inclusive interface.',
+    description: '🏆 Runner Up (Beginner Track) @ Big Red Hacks \'24: Pathway is a community-driven mapping platform \
+     designed for disabled users, enabling them to discover and share accessibility information about various locations\
+    through an intuitive and inclusive interface.',
     technologies: ['TypeScript', 'Python', 'FastAPI', 'React', 'Tailwind CSS', 'Google Maps API'],
     link: 'https://github.com/jonathandlee/Pathway',
 
-  }
+  },
+  {
+    title: 'MBTI Personality Prediction with ML',
+    description: 'Developed a machine learning model to predict MBTI personality types based on text data, leveraging NLP techniques \
+    and algorithms like Logistic Regression and Naive Bayes for classification.',
+    technologies: ['Python', 'scikit-learn', 'NLTK', 'spaCy', 'NumPy', 'Matplotlib', 'Seaborn', 'Jupyter Notebook'],
+    link: 'https://github.com/AryanKumar1401/MBTI-Personality-Prediction-using-ML',
+  },
+  {
+    title: 'Momentum',
+    description: ' Momentum is a minimalist productivity app I designed and developed to help users build and sustain meaningful habits. Inspired by the principles of Atomic Habits, the app empowers individuals to create small, actionable routines, track their progress, and reflect on their journey—all in one simple, intuitive interface.',
+    technologies: ['React Native', 'Expo', 'TypeScript', 'Tailwind CSS'],
+    link: 'https://github.com/AryanKumar1401/Momentum',
+  },
+  {
+    title: 'CardCamel - A Flashcard App in OCaml',
+    description: 'A terminal-based flashcard study app designed for focused and efficient learning. Built with OCaml, it features customizable decks, randomized quizzes, interactive games, and progress tracking. CardCamel simplifies studying with an intuitive text-based interface, CSV import/export, and detailed performance analytics.'
+    ,
+    technologies: ['OCaml', 'Dune', 'ANSITerminal', 'OUnit'],
+    link: 'https://github.coecis.cornell.edu/ak2488/CS3110_Final_Project',
+  },
 ];
 
 const PortfolioPage = () => {
@@ -100,7 +124,7 @@ const PortfolioPage = () => {
       )}
 
       {/* Header */}
-      <header className="bg-white/90 backdrop-blur-sm shadow-md">
+      <header className="bg-white/90 backdrop-blur-sm shadow-md fixed top-0 left-0 right-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-6 flex justify-between items-center">
           <h1 className="text-2xl font-bold font-poppins text-[#FF6B6B]">Aryan Kumar</h1>
           <nav className="flex space-x-6 font-poppins font-medium">
@@ -112,7 +136,7 @@ const PortfolioPage = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="max-w-6xl mx-auto px-4 py-20">
+      <section className="max-w-6xl mx-auto px-4 py-20 mt-10">
         <div className="grid md:grid-cols-2 items-center gap-12">
           <div>
             <h2 className="text-5xl font-bold mb-6 font-poppins leading-tight text-[#2D3436]">
