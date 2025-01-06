@@ -38,7 +38,8 @@ const skills = [
       { name: 'Django', icon: Server },
       { name: 'FastAPI', icon: Zap },
       { name: 'Next.js', icon: Box },
-      { name: 'Express', icon: Server }
+      { name: 'Express', icon: Server },
+      { name: 'TensorFlow', icon: Box },
     ]
   },
   {
@@ -50,7 +51,7 @@ const skills = [
       { name: 'Firebase', icon: Cloud },
       { name: 'Supabase', icon: Cloud },
       { name: 'PostgreSQL', icon: Database },
-      { name: 'TensorFlow', icon: Box },
+
       { name: 'Postman', icon: Cloud }
     ]
   }
@@ -136,10 +137,10 @@ const PortfolioPage = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="max-w-6xl mx-auto px-4 py-20 mt-10">
+      <section id = "about" className="max-w-6xl mx-auto px-4 py-20 mt-10">
         <div className="grid md:grid-cols-2 items-center gap-12">
           <div>
-            <h2 className="text-5xl font-bold mb-6 font-poppins leading-tight text-[#2D3436]">
+            <h2  className="text-5xl font-bold mb-6 font-poppins leading-tight text-[#2D3436]">
               Computer Science Student & <span className="text-[#FF6B6B]">Software Developer</span>
             </h2>
             <p className="mb-8 font-merriweather leading-relaxed text-gray-700">
@@ -147,13 +148,13 @@ const PortfolioPage = () => {
             </p>
             <div className="flex flex-col gap-6">
               <div className="flex space-x-4 items-center">
-                <a href="#" aria-label="GitHub" className="hover:text-[#FF6B6B] transition-colors">
+                <a href="https://github.com/AryanKumar1401/" aria-label="GitHub" className="hover:text-[#FF6B6B] transition-colors">
                   <Github size={24} />
                 </a>
-                <a href="#" aria-label="LinkedIn" className="hover:text-[#FF6B6B] transition-colors">
+                <a href="https://www.linkedin.com/in/aryan-kumar-3434961aa/" aria-label="LinkedIn" className="hover:text-[#FF6B6B] transition-colors">
                   <Linkedin size={24} />
                 </a>
-                <a href="#" aria-label="Email" className="hover:text-[#FF6B6B] transition-colors">
+                <a href="mailto:ak2488@cornell.edu" aria-label="Email" className="hover:text-[#FF6B6B] transition-colors">
                   <Mail size={24} />
                 </a>
                 <a
@@ -273,22 +274,22 @@ const PortfolioPage = () => {
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6 font-poppins">Let's Connect</h2>
           <p className="text-xl mb-8 font-merriweather max-w-2xl mx-auto">
-            Interested in collaborating or discussing potential opportunities?
-            Feel free to reach out.
+        Interested in collaborating or discussing potential opportunities?
+        Feel free to reach out at ak2488 [at] cornell [dot] edu. 
           </p>
-          <a
-            href="mailto:your.email@example.com"
-            className="bg-white text-[#FF6B6B] px-8 py-4 rounded-lg hover:bg-[#FFFAF0] transition-colors inline-flex items-center gap-2 font-poppins font-medium"
+          {/* <a
+        href="mailto:ak2488@cornell.edu"
+        className="bg-white text-[#FF6B6B] px-8 py-4 rounded-lg hover:bg-[#FFFAF0] transition-colors inline-flex items-center gap-2 font-poppins font-medium"
           >
-            <Mail /> Contact Me
-          </a>
+        <Mail /> 
+          </a> */}
         </div>
       </section>
 
       {/* Footer */}
       <footer className="bg-[#2D3436] text-white py-8">
         <div className="max-w-6xl mx-auto px-4 text-center font-merriweather">
-          <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+          <p>&copy; 2024 Aryan Kumar.</p>
         </div>
       </footer>
     </div>
