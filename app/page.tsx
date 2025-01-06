@@ -37,6 +37,7 @@ const skills = [
       { name: 'Next.js', icon: Box },
       { name: 'Express', icon: Server },
       { name: 'TensorFlow', icon: Box },
+      { name: 'React Native', icon: Box },
     ]
   },
   {
@@ -130,7 +131,7 @@ const PortfolioPage = () => {
   };
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -331,7 +332,7 @@ const PortfolioPage = () => {
           <h2 className="text-4xl font-bold mb-6 font-poppins">Let's Connect</h2>
           <p className="text-xl mb-8 font-merriweather max-w-2xl mx-auto">
             Interested in collaborating or discussing potential opportunities?
-            Feel free to reach out at ak2488 [at] cornell [dot] edu. 
+            Feel free to reach out at ak2488 [at] cornell [dot] edu.
           </p>
         </div>
       </motion.section>
