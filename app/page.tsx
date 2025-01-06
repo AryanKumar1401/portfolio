@@ -1,20 +1,17 @@
 "use client";
+import { motion } from 'framer-motion';
 import React from 'react';
 import {
   Code,
   Github,
   Linkedin,
   Mail,
-
   Server,
   Database,
-
   Zap,
-
   Box,
   Cloud,
   Link,
-
 } from 'lucide-react';
 
 const skills = [
@@ -51,7 +48,6 @@ const skills = [
       { name: 'Firebase', icon: Cloud },
       { name: 'Supabase', icon: Cloud },
       { name: 'PostgreSQL', icon: Database },
-
       { name: 'Postman', icon: Cloud }
     ]
   }
@@ -80,16 +76,14 @@ const projects = [
     technologies: ['TypeScript', 'Python', 'GPT-4', 'FastAPI', 'React', 'Tailwind CSS', 'Supabase', 'Prisma'],
     link: 'https://github.com/23spakkerakari/HireVision',
     website: 'https://www.canva.com/design/DAGWBja42Uw/OB7lXjmUI9obDXJgJ2LSxg/edit?utm_content=DAGWBja42Uw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'
-
   },
   {
     title: 'Pathway',
-    description: '🏆 Runner Up (Beginner Track) @ Big Red Hacks \'24: Pathway is a community-driven mapping platform \
+    description: '🏆 Best DEI Hack & Runner Up (Beginner Track) @ Big Red Hacks \'24: Pathway is a community-driven mapping platform \
      designed for disabled users, enabling them to discover and share accessibility information about various locations\
     through an intuitive and inclusive interface.',
     technologies: ['TypeScript', 'Python', 'FastAPI', 'React', 'Tailwind CSS', 'Google Maps API'],
     link: 'https://github.com/jonathandlee/Pathway',
-
   },
   {
     title: 'MBTI Personality Prediction with ML',
@@ -114,8 +108,34 @@ const projects = [
 ];
 
 const PortfolioPage = () => {
+  const fadeInUp = {
+    initial: { y: 20, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+    transition: { duration: 0.5 }
+  };
+
+  const staggerContainer = {
+    animate: {
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const cardHover = {
+    scale: 1.02,
+    transition: {
+      duration: 0.2
+    }
+  };
+
   return (
-    <div className="bg-[#FFFAF0] min-h-screen text-[#2D3436]">
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="bg-[#FFFAF0] min-h-screen text-[#2D3436]"
+    >
       {/* Manually added metadata since we can't use Next.js Head */}
       {typeof document !== 'undefined' && (
         <>
@@ -137,15 +157,24 @@ const PortfolioPage = () => {
       </header>
 
       {/* Hero Section */}
-      <section id = "about" className="max-w-6xl mx-auto px-4 py-20 mt-10">
+      <section id="about" className="max-w-6xl mx-auto px-4 py-20 mt-10">
         <div className="grid md:grid-cols-2 items-center gap-12">
-          <div>
-            <h2  className="text-5xl font-bold mb-6 font-poppins leading-tight text-[#2D3436]">
+          <motion.div
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-5xl font-bold mb-6 font-poppins leading-tight text-[#2D3436]">
               Computer Science Student & <span className="text-[#FF6B6B]">Software Developer</span>
             </h2>
-            <p className="mb-8 font-merriweather leading-relaxed text-gray-700">
+            <motion.p
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="mb-8 font-merriweather leading-relaxed text-gray-700"
+            >
               Hi there! I'm Aryan Kumar, a student at Cornell University, majoring in Computer Science and minoring in AI. I'm a passionate tech enthusiast who thrives at the intersection of innovation, creativity, and problem-solving. My journey at Cornell has taken me from creating a platform with Cornell GreenClub to optimize transportation routes and reduce carbon emissions to developing AI path-planning algorithms for autonomous boats as part of the Cornell Autoboat Project Team. Outside of coding, you'll find me hiking scenic trails, running around lakes, or playing the piano.  I’m driven by the belief that technology is more than just tools—it’s a force for shaping a sustainable, smarter future. Let’s connect and create something extraordinary together!
-            </p>
+            </motion.p>
             <div className="flex flex-col gap-6">
               <div className="flex space-x-4 items-center">
                 <a href="https://github.com/AryanKumar1401/" aria-label="GitHub" className="hover:text-[#FF6B6B] transition-colors">
@@ -166,8 +195,13 @@ const PortfolioPage = () => {
                 </a>
               </div>
             </div>
-          </div>
-          <div className="hidden md:block">
+          </motion.div>
+          <motion.div
+            initial={{ x: 50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className="hidden md:block"
+          >
             <div className="bg-blue-100 rounded-full w-64 h-64 mx-auto overflow-hidden">
               <img
                 src="profile.png"
@@ -175,21 +209,29 @@ const PortfolioPage = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Skills Section */}
       <section id="skills" className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 font-poppins text-[#2D3436]">
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          variants={staggerContainer}
+          className="max-w-6xl mx-auto px-4"
+        >
+          <motion.h2 variants={fadeInUp} className="text-4xl font-bold text-center mb-12 font-poppins text-[#2D3436]">
             Technical Skills
-          </h2>
+          </motion.h2>
           <div className="grid md:grid-cols-3 gap-8">
             {skills.map((skillCategory, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="bg-[#FFFAF0] p-6 rounded-lg shadow-md hover:shadow-lg transition-all"
+                variants={fadeInUp}
+                whileHover={cardHover}
+                className="bg-[#FFFAF0] p-6 rounded-lg shadow-md transition-all"
               >
                 <h3 className="text-2xl font-semibold mb-6 font-poppins text-[#FF6B6B]">
                   {skillCategory.name}
@@ -205,23 +247,31 @@ const PortfolioPage = () => {
                     </div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Projects Section */}
       <section id="projects" className="py-20 bg-[#FFFAF0]">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 font-poppins text-[#2D3436]">
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          variants={staggerContainer}
+          className="max-w-6xl mx-auto px-4"
+        >
+          <motion.h2 variants={fadeInUp} className="text-4xl font-bold text-center mb-12 font-poppins text-[#2D3436]">
             Featured Projects
-          </h2>
+          </motion.h2>
           <div className="grid md:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all"
+                variants={fadeInUp}
+                whileHover={cardHover}
+                className="bg-white rounded-lg shadow-md overflow-hidden"
               >
                 <div className="p-8">
                   <h3 className="text-2xl font-semibold mb-4 font-poppins text-[#2D3436]">
@@ -263,28 +313,28 @@ const PortfolioPage = () => {
                     )}
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Contact Section */}
-      <section className="bg-[#FF6B6B] text-white py-20">
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="bg-[#FF6B6B] text-white py-20"
+      >
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6 font-poppins">Let's Connect</h2>
           <p className="text-xl mb-8 font-merriweather max-w-2xl mx-auto">
-        Interested in collaborating or discussing potential opportunities?
-        Feel free to reach out at ak2488 [at] cornell [dot] edu. 
+            Interested in collaborating or discussing potential opportunities?
+            Feel free to reach out at ak2488 [at] cornell [dot] edu. 
           </p>
-          {/* <a
-        href="mailto:ak2488@cornell.edu"
-        className="bg-white text-[#FF6B6B] px-8 py-4 rounded-lg hover:bg-[#FFFAF0] transition-colors inline-flex items-center gap-2 font-poppins font-medium"
-          >
-        <Mail /> 
-          </a> */}
         </div>
-      </section>
+      </motion.section>
 
       {/* Footer */}
       <footer className="bg-[#2D3436] text-white py-8">
@@ -292,7 +342,7 @@ const PortfolioPage = () => {
           <p>&copy; 2024 Aryan Kumar.</p>
         </div>
       </footer>
-    </div>
+    </motion.div>
   );
 };
 
