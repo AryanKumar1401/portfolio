@@ -96,6 +96,12 @@ const projects = [
     link: 'https://github.com/AryanKumar1401/MBTI-Personality-Prediction-using-ML',
   },
   {
+    title: 'Stoic Companion',
+    description: 'Stoic Companion is a modern web application designed to make introspection meaningful and engaging. With daily philosophical quotes, guided journaling prompts, and GPT-4–powered reflections, Stoic Companion brings your favorite philosophers to life, offering personalized advice and insights tailored to your thoughts and emotions.',
+    technologies: ['TypeScript', 'Next.js', 'GPT-4', 'REST API', 'Tailwind CSS', 'Prisma', 'PostgreSQL', 'AWS RDS'],
+    link: 'https://github.com/AryanKumar1401/MBTI-Personality-Prediction-using-ML',
+  },
+  {
     title: 'Momentum',
     description: ' Momentum is a minimalist productivity app I designed and developed to help users build and sustain meaningful habits. Inspired by the principles of Atomic Habits, the app empowers individuals to create small, actionable routines, track their progress, and reflect on their journey—all in one simple, intuitive interface.',
     technologies: ['React Native', 'Expo', 'TypeScript', 'Tailwind CSS'],
@@ -153,9 +159,9 @@ const PortfolioPage = () => {
       <header className="bg-white/90 backdrop-blur-sm shadow-md fixed top-0 left-0 right-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
           <h1 className="text-xl md:text-2xl font-bold font-poppins text-[#FF6B6B]">Aryan Kumar</h1>
-          
+
           {/* Mobile Menu Button */}
-          <button 
+          <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden text-[#2D3436]"
           >
@@ -172,7 +178,7 @@ const PortfolioPage = () => {
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <motion.nav 
+          <motion.nav
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             className="md:hidden bg-white border-t py-4"
