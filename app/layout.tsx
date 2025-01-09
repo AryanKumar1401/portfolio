@@ -3,7 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Poppins, Merriweather } from 'next/font/google';
 import "./globals.css";
 import { RootLayoutClient } from "./components/RootLayout";
-
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
 //   subsets: ["latin"],
@@ -39,7 +40,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${merriweather.variable}`} suppressHydrationWarning>
       <body>
-        <RootLayoutClient>{children}</RootLayoutClient>
+
+        <RootLayoutClient>{children}        <Analytics />
+          <SpeedInsights /></RootLayoutClient>
       </body>
     </html>
   );
