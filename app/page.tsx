@@ -99,7 +99,8 @@ const projects = [
     title: 'Stoic Companion',
     description: 'Stoic Companion is a modern web application designed to make introspection meaningful and engaging. With daily philosophical quotes, guided journaling prompts, and GPT-4–powered reflections, Stoic Companion brings your favorite philosophers to life, offering personalized advice and insights tailored to your thoughts and emotions.',
     technologies: ['TypeScript', 'Next.js', 'GPT-4', 'REST API', 'Tailwind CSS', 'Prisma', 'PostgreSQL', 'AWS RDS'],
-    link: 'https://github.com/AryanKumar1401/MBTI-Personality-Prediction-using-ML',
+    link: 'https://github.com/AryanKumar1401/stoic-companion',
+    website: 'https://stoic-companion.vercel.app/'
   },
   {
     title: 'Momentum',
@@ -113,6 +114,12 @@ const projects = [
     ,
     technologies: ['OCaml', 'Dune', 'ANSITerminal', 'OUnit'],
     link: 'https://github.coecis.cornell.edu/ak2488/CS3110_Final_Project',
+  },
+  {
+    title: 'C++ Pet Shelter Management System',
+    description: 'A C++ console application for managing a pet shelter\'s records. The system allows users to maintain a database of pets with their details and perform various operations through an interactive menu interface.',
+    technologies: ['C++'],
+    link: 'https://github.com/AryanKumar1401/pet-shelter-management-in-CPP',
   },
 ];
 
