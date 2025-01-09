@@ -113,7 +113,7 @@ const projects = [
     description: 'A terminal-based flashcard study app designed for focused and efficient learning. Built with OCaml, it features customizable decks, randomized quizzes, interactive games, and progress tracking. CardCamel simplifies studying with an intuitive text-based interface, CSV import/export, and detailed performance analytics.'
     ,
     technologies: ['OCaml', 'Dune', 'ANSITerminal', 'OUnit'],
-    link: 'https://github.coecis.cornell.edu/ak2488/CS3110_Final_Project',
+    link: 'https://github.com/AryanKumar1401/CardCamel',
   },
   {
     title: 'C++ Pet Shelter Management System',
