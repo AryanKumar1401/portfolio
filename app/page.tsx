@@ -1,6 +1,7 @@
 "use client";
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
+import { ReactTyped } from 'react-typed';
 import {
   Code,
   Github,
@@ -209,15 +210,33 @@ const PortfolioPage = () => {
             className="text-center md:text-left order-2 md:order-1"
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-6 font-poppins leading-tight text-[#2D3436]">
-              Computer Science Student & <span className="text-[#FF6B6B]">Software Developer</span>
-            </h2>
+              I'm a <span className="text-[#FF6B6B]">
+
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.8 }}
+                >
+                  <ReactTyped
+                    strings={[
+                      "CS student.",
+                      "Software Developer.",
+                      "Lifelong Learner.",
+                      "NYT games player.",
+                    ]}
+                    typeSpeed={50}
+                    backSpeed={30}
+                    backDelay={1500}
+                    loop
+                  />
+                </motion.div></span></h2>
             <motion.p
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.6 }}
               className="mb-8 font-merriweather leading-relaxed text-gray-700"
             >
-              Hi there! I’m Aryan, a Computer Science major and AI minor at Cornell University. I'm a passionate tech enthusiast who combining creativity and problem-solving to solve everyday problems. My journey at Cornell has taken me from creating a platform with Cornell GreenClub to optimize transportation routes and reduce carbon emissions to developing AI path-planning algorithms for autonomous boats as part of the Cornell Autoboat Project Team. When I’m not coding, you’ll probably find me hiking scenic trails, running by the lake, watching anime or playing the piano.
+              Hi there! I’m Aryan, a Computer Science major and AI minor at Cornell University. I'm a passionate tech enthusiast who loves combining creativity and problem-solving to solve everyday problems. My interests are Artificial Intelligence (ML & NLP), Software Engineering, and Data Science. My journey at Cornell has taken me from creating a platform with Cornell GreenClub to optimize transportation routes and reduce carbon emissions to developing AI path-planning algorithms for autonomous boats as part of the Cornell Autoboat Project Team. When I’m not coding, you’ll probably find me hiking scenic trails, running by the lake, watching anime or playing the piano.
             </motion.p>
             <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
               <div className="flex space-x-4 items-center">
