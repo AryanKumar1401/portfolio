@@ -217,7 +217,7 @@ const PortfolioPage = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="mb-8 font-merriweather leading-relaxed text-gray-700"
             >
-              Hi there! I'm Aryan Kumar, a student at Cornell University, majoring in Computer Science and minoring in AI. I'm a passionate tech enthusiast who thrives at the intersection of innovation, creativity, and problem-solving. My journey at Cornell has taken me from creating a platform with Cornell GreenClub to optimize transportation routes and reduce carbon emissions to developing AI path-planning algorithms for autonomous boats as part of the Cornell Autoboat Project Team. Outside of coding, you'll find me hiking scenic trails, running around lakes, or playing the piano.  I’m driven by the belief that technology is more than just tools—it’s a force for shaping a sustainable, smarter future. Let’s connect and create something extraordinary together!
+              Hi there! I’m Aryan, a Computer Science major and AI minor at Cornell University. I'm a passionate tech enthusiast who combining creativity and problem-solving to solve everyday problems. My journey at Cornell has taken me from creating a platform with Cornell GreenClub to optimize transportation routes and reduce carbon emissions to developing AI path-planning algorithms for autonomous boats as part of the Cornell Autoboat Project Team. When I’m not coding, you’ll probably find me hiking scenic trails, running by the lake, watching anime or playing the piano.
             </motion.p>
             <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
               <div className="flex space-x-4 items-center">
