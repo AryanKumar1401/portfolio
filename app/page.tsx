@@ -203,13 +203,32 @@ const PortfolioPage = () => {
       {/* Hero Section */}
       <section id="about" className="max-w-6xl mx-auto px-4 py-20 mt-10">
         <div className="flex flex-col md:grid md:grid-cols-2 items-center gap-8">
+
           <motion.div
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
             className="text-center md:text-left order-2 md:order-1"
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 font-poppins leading-tight text-[#2D3436]">
+            <motion.h2
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              className="text-2xl md:text-3xl font-bold mb-4 font-poppins leading-tight text-[#2D3436] flex items-center gap-2"
+            >
+              Hey there <motion.span
+                animate={{ rotate: [0, 30, -30, 15, -15, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 2 }}
+              >
+                👋
+              </motion.span>
+            </motion.h2>
+            <motion.h2
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-3xl md:text-5xl font-bold mb-6 font-poppins leading-tight text-[#2D3436]"
+            >
               I'm a <span className="text-[#FF6B6B]">
 
                 <motion.div
@@ -229,14 +248,14 @@ const PortfolioPage = () => {
                     backDelay={1500}
                     loop
                   />
-                </motion.div></span></h2>
+                </motion.div></span></motion.h2>
             <motion.p
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.6 }}
               className="mb-8 font-merriweather leading-relaxed text-gray-700"
             >
-              Hi there! I’m Aryan, a Computer Science major and AI minor at Cornell University. I'm a passionate tech enthusiast who loves combining creativity and problem-solving to solve everyday problems. My interests are Artificial Intelligence (ML & NLP), Software Engineering, and Data Science. My journey at Cornell has taken me from creating a platform with Cornell GreenClub to optimize transportation routes and reduce carbon emissions to developing AI path-planning algorithms for autonomous boats as part of the Cornell Autoboat Project Team. When I’m not coding, you’ll probably find me hiking scenic trails, running by the lake, watching anime or playing the piano.
+              I’m Aryan, a Computer Science major and AI minor at Cornell University. I'm a passionate tech enthusiast who loves combining creativity and problem-solving to solve everyday problems. My interests are Artificial Intelligence (ML & NLP), Software Engineering, and Data Science. My journey at Cornell has taken me from creating a platform with Cornell GreenClub to optimize transportation routes and reduce carbon emissions to developing AI path-planning algorithms for autonomous boats as part of the Cornell Autoboat Project Team. When I’m not coding, you’ll probably find me hiking scenic trails, running by the lake, watching anime or playing the piano.
             </motion.p>
             <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
               <div className="flex space-x-4 items-center">
