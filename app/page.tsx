@@ -184,11 +184,7 @@ const PortfolioPage = () => {
         width: 1,
       },
       move: {
-        direction: "none",
         enable: true,
-        outModes: {
-          default: "bounce",
-        },
         random: false,
         speed: 2,
         straight: false,
