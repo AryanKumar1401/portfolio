@@ -81,8 +81,8 @@ const projects = [
     the HireVue process by providing detailed candidate reviews with pros, cons, and summaries. It also delivers behavioral analytics \
     across applicants, helping companies visualize hiring patterns and optimize recruitment strategies.',
     technologies: ['TypeScript', 'Python', 'GPT-4', 'FastAPI', 'React', 'Tailwind CSS', 'Supabase', 'Prisma'],
-    link: 'https://github.com/23spakkerakari/HireVision',
-    website: 'https://www.canva.com/design/DAGWBja42Uw/OB7lXjmUI9obDXJgJ2LSxg/edit?utm_content=DAGWBja42Uw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'
+    link: 'https://github.com/AryanKumar1401/HireVision',
+    website: 'https://hire-vision-three.vercel.app/'
   },
   {
     title: 'Pathway',
