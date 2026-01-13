@@ -2,18 +2,16 @@ import { Project } from '../types';
 
 export const projects: Project[] = [
   {
-    title: 'DataTool',
-    description: 'datatool.tech is a generative AI platform for natural language data analysis. It allows users to upload datasets, clean them, and generate insightful visualizations. This tool leverages the power of GPT-4 for data cleaning and visualization tasks, providing an interactive and user-friendly experience.',
-    technologies: ['React', 'Typescript', 'Tailwind CSS', 'GPT-4', 'Express', 'Node.js', 'Firebase', 'Stripe'],
-    link: 'https://github.com/AryanKumar1401/data-tool-copy',
-    website: 'https://datatool.tech'
+    title: 'ImportGuard',
+    description: 'Unit tests, but for import behavior. A Python library that helps developers ensure their module imports behave correctly, catching import-related issues before they cause problems in production.',
+    technologies: ['Python', 'pytest', 'CI/CD'],
+    link: 'https://github.com/AryanKumar1401/importguard',
   },
   {
-    title: 'Asphalt',
-    description: 'Developed a dynamic GIS-based platform with Cornell GreenClub, leveraging algorithms like the Traveling Salesman Problem and real-time data to optimize transportation routes, reduce carbon emissions by 30%, and drive sustainability initiatives in Tompkins County.',
-    technologies: ['Python', 'Next.js', 'TypeScript', 'Tailwind CSS', 'OpenStreetMaps API', 'ArcGIS'],
-    link: 'https://github.com/Cornell-GreenClub/asphalt',
-    website: 'https://asphalt-gc.vercel.app/'
+    title: 'Shadow Planner',
+    description: 'A Chrome extension that passively learns how you actually work—tracking focus windows, task switching, and peak performance times—then turns it into actionable scheduling and batching recommendations. Features work mode classification, focus sessions with drift alerts, and a multi-color timeline visualization, all with privacy-first local storage.',
+    technologies: ['TypeScript', 'React', 'Vite', 'Tailwind CSS', 'IndexedDB', 'Chrome Extensions API', 'Recharts'],
+    link: 'https://github.com/AryanKumar1401/shadow-planner',
   },
   {
     title: 'HireVision',
@@ -23,10 +21,24 @@ export const projects: Project[] = [
     website: 'https://hire-vision-three.vercel.app/'
   },
   {
+    title: 'Asphalt',
+    description: 'Developed a dynamic GIS-based platform with Cornell GreenClub, leveraging algorithms like the Traveling Salesman Problem and real-time data to optimize transportation routes, reduce carbon emissions by 30%, and drive sustainability initiatives in Tompkins County.',
+    technologies: ['Python', 'Next.js', 'TypeScript', 'Tailwind CSS', 'OpenStreetMaps API', 'ArcGIS'],
+    link: 'https://github.com/Cornell-GreenClub/asphalt',
+    website: 'https://asphalt-gc.vercel.app/'
+  },
+  {
     title: 'Pathway',
     description: '🏆 Best DEI Hack & Runner Up (Beginner Track) @ Big Red Hacks \'24: Pathway is a community-driven mapping platform designed for disabled users, enabling them to discover and share accessibility information about various locations through an intuitive and inclusive interface.',
     technologies: ['TypeScript', 'Python', 'FastAPI', 'React', 'Tailwind CSS', 'Google Maps API'],
     link: 'https://github.com/jonathandlee/Pathway',
+  },
+  {
+    title: 'DataTool',
+    description: 'datatool.tech is a generative AI platform for natural language data analysis. It allows users to upload datasets, clean them, and generate insightful visualizations. This tool leverages the power of GPT-4 for data cleaning and visualization tasks, providing an interactive and user-friendly experience.',
+    technologies: ['React', 'Typescript', 'Tailwind CSS', 'GPT-4', 'Express', 'Node.js', 'Firebase', 'Stripe'],
+    link: 'https://github.com/AryanKumar1401/data-tool-copy',
+    website: 'https://datatool.tech'
   },
   {
     title: 'MBTI Personality Prediction with ML',

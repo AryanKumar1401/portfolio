@@ -7,6 +7,7 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { Github, Linkedin, Mail, Code } from 'lucide-react';
 import { particlesOptions } from '../../lib/particles';
+import Image from 'next/image';
 
 export const HeroSection = () => {
   const [init, setInit] = useState(false);
@@ -115,11 +116,13 @@ export const HeroSection = () => {
             transition={{ duration: 0.6 }}
             className="block order-1 md:order-2 mb-8 md:mb-0"
           >
-            <div className="bg-blue-100 rounded-full w-48 h-48 md:w-64 md:h-64 mx-auto overflow-hidden">
-              <img
-                src="profile.png"
+            <div className="bg-blue-100 rounded-full w-48 h-48 md:w-64 md:h-64 mx-auto overflow-hidden relative">
+              <Image
+                src="/profile.png"
                 alt="Profile"
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                priority
               />
             </div>
           </motion.div>
